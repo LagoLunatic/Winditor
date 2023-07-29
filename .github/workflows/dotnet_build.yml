@@ -15,8 +15,10 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '5.0.x'
-      - name: Install dependencies
-        run: dotnet restore --verbosity diagnostic
+      # - name: Install dependencies
+      #   run: dotnet restore --verbosity diagnostic
+      - name: Install nuget dependencies
+        run: nuget restore Winditor.sln
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
