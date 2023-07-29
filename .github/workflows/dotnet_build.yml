@@ -17,8 +17,8 @@ jobs:
       #     dotnet-version: '5.0.x'
       # # - name: Install dependencies
       # #   run: dotnet restore --verbosity diagnostic
-      # # - name: Install nuget dependencies
-      # #   run: nuget restore Winditor.sln
+      - name: Install nuget dependencies
+        run: nuget restore Winditor.sln
       # - name: Build
       #   run: dotnet build --configuration Release --verbosity detailed
       # - name: Test
@@ -28,4 +28,4 @@ jobs:
         with:
           vs-version: '16.11'
       - name: Build
-        run: msbuild /t:Build
+        run: msbuild Winditor.sln /t:Build /property:Configuration=Release
