@@ -21,4 +21,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Winditor
-          path: bin\x86\Release\*
+          path: Editor\bin\x86\Release\*
