@@ -17,9 +17,9 @@ jobs:
           dotnet-version: '5.0.x'
       # - name: Install dependencies
       #   run: dotnet restore --verbosity diagnostic
-      - name: Install nuget dependencies
-        run: nuget restore Winditor.sln
+      # - name: Install nuget dependencies
+      #   run: nuget restore Winditor.sln
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build --configuration Release --verbosity detailed
       - name: Test
         run: dotnet test --no-restore --verbosity normal
